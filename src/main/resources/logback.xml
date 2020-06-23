@@ -1,0 +1,9 @@
+<configuration>
+    <property name="LOGS" value="./logs" />
+    <appender name="jsonConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+    <root level="ERROR">
+        <appender-ref ref="jsonConsoleAppender"/>
+    </root>
+</configuration>
