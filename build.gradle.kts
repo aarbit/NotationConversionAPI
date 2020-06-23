@@ -23,6 +23,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.springframework.boot:spring-boot-starter-logging")
     implementation("net.logstash.logback:logstash-logback-encoder:6.3")
+    implementation("io.springfox:springfox-swagger2:2.10.2")
+    implementation("io.springfox:springfox-swagger-ui:2.10.2")
+    implementation("io.springfox:springfox-spring-webmvc:2.10.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
