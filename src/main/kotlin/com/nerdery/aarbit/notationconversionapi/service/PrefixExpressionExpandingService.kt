@@ -1,0 +1,3 @@
+package com.nerdery.aarbit.notationconversionapi.service
+
+abstract class PrefixExpressionExpandingService: ExpressionExpandingService()
