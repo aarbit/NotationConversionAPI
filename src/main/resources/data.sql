@@ -1,0 +1,1 @@
+--INSERT INTO user_info (id, username, password) VALUES (1, 'aarbit', '$2y$12$xbbFTQkGz4KdHv4FtnNPrOTbueCg0e8hl3gXlcwDuxmbrhXpD/Aaq')

@@ -7,10 +7,29 @@ A Spring Boot application that provides an API to convert one mathematical notat
 Given a properly setup Java JDK (v8) installation, on the command line, run:
     
 ```
-    $ ./gradlew bootRun
+    $ ./gradlew -PSECRET_KEY="{your-secret-key}" bootRun
 ```
+where {your-secret-key} is any string of your choice. It is used for JWT signing.
 
 ## Usage
+
+### POST: /user/signup
+```
+    body: {
+        "username":"{username-you-like}",
+        "password":"{password-you-like}"
+    }
+```
+
+### POST: /login
+```
+    body: {
+        "username":"{username-you-chose}",
+        "password":"{password-you-chose}"
+    }
+```
+Use the content of the "Authorization" response header in subsequent POSTs' Authorization headers
+
 ### POST: /convert/output/{notation-type}
 ```
     notation-type: String (e.g. postfix)
@@ -23,3 +42,4 @@ and the response is a string of the converted expression in the same format as t
 
 ## Note
 The server's port defaults to 8080
+JWT timeout is 5min
